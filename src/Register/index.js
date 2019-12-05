@@ -34,7 +34,7 @@ class Register extends Component {
         //validation
         if (parsedResponse.status.code === 200) {
             console.log('success');
-            // this.props.history.push('/');
+            this.props.history.push('/');
             //programatically change url using react-router
         } else {
             this.setState( {

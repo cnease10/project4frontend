@@ -35,10 +35,10 @@ class Login extends Component {
 
         //validation
         if (parsedResponse.status.code === 200) {
-            // this.props.logIn();
+            this.props.logIn();
             console.log('success');
-            // this.props.logIn();
-            // this.props.history.push('/');
+            this.props.logIn();
+            this.props.history.push('/');
             //programatically change url using react-router
         } else {
             this.setState( {

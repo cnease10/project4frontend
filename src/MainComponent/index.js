@@ -32,8 +32,7 @@ class MainComponent extends Component {
     render() {
         return(
             <div>
-                <Login />
-                <Register />
+
                 <HomeComponent getDates={this.getDates} dates={this.state.dates}/>
             </div>
         )
