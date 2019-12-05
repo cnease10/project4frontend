@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import HomeComponent from '../HomeComponent ';
 import CreateDateComponent from '../CreateDateComponent'
 import EditDateComponent from '../EditDateComponent'
-
+import UserDateList from '../UserDateList'
 
 class MainComponent extends Component {
     constructor() {
@@ -14,7 +14,8 @@ class MainComponent extends Component {
             dateEdit: {
                 name: '',
                 description: ''
-            }
+            },
+            editmodal: false,
         }
         
     }
@@ -37,11 +38,30 @@ class MainComponent extends Component {
         }
 
     }
-    //CREATE A DATE
+    // GET ALL USER CREATED DATES
+    getCreatedDates = async() => {
+        try {
+            const dates = await fetch(process.env.REACT_APP_API_URL + '/api/v1/creates/', {
+               credentials: 'include',
+               method: 'GET' 
+            });
+            console.log(dates)
+            const parsedDates = await dates.json();
+            this.setState({
+                userdates: parsedDates.data,
+            })
+            console.log(parsedDates.data);
+            console.log('hitting route')
+        } catch (err) {
+            console.log(err);
+        }
+
+    }
+    //CREATE A USER DATE
     addDate = async(e, date) => {
         e.preventDefault();
         try {
-            const dateResponse = await fetch(process.env.REACT_APP_API_URL + '/api/v1/dates/', {
+            const dateResponse = await fetch(process.env.REACT_APP_API_URL + '/api/v1/creates/', {
                 method: 'POST',
                 body: JSON.stringify(date),
                 credentials: 'include',
@@ -64,7 +84,7 @@ class MainComponent extends Component {
             console.log(err)
         }
     }
-    //EDIT DATE
+    //EDIT USER DATE
     handleEdit = (e) => {
         this.setState({
             dateEdit: {
@@ -76,7 +96,7 @@ class MainComponent extends Component {
     openModal = (date) => {
         console.log(date)
         this.setState({
-            // showModal: true,
+            editModal: true,
             dateEdit: {
                 ...date
             }
@@ -87,7 +107,7 @@ class MainComponent extends Component {
         e.preventDefault();
 
         try{
-            const editResponse = await fetch(process.env.REACT_APP_API_URL + '/api/v1/dates/' + this.state.dateEdit.id, {
+            const editResponse = await fetch(process.env.REACT_APP_API_URL + '/api/v1/creates/' + this.state.dateEdit.id, {
                 method: 'PUT',
                 body: JSON.stringify(this.state.dateEdit),
                 credentials: 'include',
@@ -104,11 +124,29 @@ class MainComponent extends Component {
             })
             this.setState({
                 userdates: newDateArray,
-                // showModal: false,
+                editModal: false,
             })
             this.setState({ state: this.state });
         } catch(err) {
             console.log(err)
+        }
+    }
+
+    //DELETE USER DATE
+    deletedate = async(dateId) => {
+        const deleteResponse = await fetch(process.env.REACT_APP_API_URL +'/api/v1/creates/' + dateId,  {
+            method: 'DELETE',
+            credentials: 'include'
+        });
+        const deleteResponseParsed = await deleteResponse.json();
+        console.log(deleteResponseParsed)
+        if (deleteResponseParsed.status.code === 200) {
+            this.setState({
+                userdates: this.state.userdates.filter((date) => date.id !== dateId),
+                })
+        console.log('hitting delete after set state')
+        } else {
+            alert('there is an issue');
         }
     }
     
@@ -117,7 +155,8 @@ class MainComponent extends Component {
             <div>
                 {/* <EditDateComponent handleEdit={this.handleEdit} openModal={this.openModal} closeModal={this.close} dateEdit={this.state.dateEdit} /> */}
                 <CreateDateComponent userdates={this.state.userdates} addDate={this.addDate}/>
-                <HomeComponent getDates={this.getDates} dates={this.state.userdates}/>
+                <HomeComponent getDates={this.getDates} dates={this.state.dates}/>
+                <UserDateList userdates={this.state.userdates}/>
             </div>
         )
     }
