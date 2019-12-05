@@ -34,14 +34,14 @@ class Login extends Component {
         const parsedResponse = await loginResponse.json();
 
         //validation
-        if (parsedResponse.status === 200) {
+        if (parsedResponse.status.code === 200) {
             console.log('success');
-            this.props.history.push('/');
             this.props.logIn();
+            this.props.history.push('/');
             //programatically change url using react-router
         } else {
             this.setState( {
-                errorMsg: parsedResponse.status
+                errorMsg: parsedResponse.status.messa
             });
         }
     }

@@ -153,10 +153,10 @@ class MainComponent extends Component {
     render() {
         return(
             <div>
-                {/* <EditDateComponent handleEdit={this.handleEdit} openModal={this.openModal} closeModal={this.close} dateEdit={this.state.dateEdit} /> */}
+                {this.state.editmodal ? <EditDateComponent handleEdit={this.handleEdit} openModal={this.openModal} closeModal={this.close} dateEdit={this.state.dateEdit} /> : null }
                 <CreateDateComponent userdates={this.state.userdates} addDate={this.addDate}/>
                 <HomeComponent getDates={this.getDates} dates={this.state.dates}/>
-                <UserDateList userdates={this.state.userdates}/>
+                <UserDateList openModal={this.openModal} deleteDate={this.deletedate} userdates={this.state.userdates}/>
             </div>
         )
     }

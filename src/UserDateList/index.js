@@ -7,7 +7,11 @@ const UserDateList = (props) => {
     //get all userdates
     const dates = props.userdates.map((date) => {
         return(
+            <div>
                 <h1 key={date.id}>{date.name}</h1>
+                <button onClick={() => props.openModal(date)}>Edit</button>
+                <button onClick={() => props.deleteDate(date.id)}>Delete</button>
+            </div>
         )
             
     })
