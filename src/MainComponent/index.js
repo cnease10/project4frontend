@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import HomeComponent from '../HomeComponent ';
-import Login from '../Login'
-import Register from '../Register'
+import CreateDateComponent from '../CreateDateComponent'
 class MainComponent extends Component {
     constructor() {
         super();
@@ -11,6 +10,7 @@ class MainComponent extends Component {
         }
         
     }
+    //GET ALL DATES
     getDates = async() => {
         try {
             const dates = await fetch(process.env.REACT_APP_API_URL + '/api/v1/dates/', {
@@ -29,10 +29,37 @@ class MainComponent extends Component {
         }
 
     }
+    //CREATE A DATE
+    addDate = async(e, date) => {
+        e.preventDefault();
+        try {
+            const dateResponse = await fetch(process.env.REACT_APP_API_URL + '/api/v1/dates/', {
+                method: 'POST',
+                body: JSON.stringify(date),
+                credentials: 'include',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+            const parsedResponse = await dateResponse.json();
+            if (parsedResponse.status.code === 200) {
+                this.setState({
+                    dates: [...this.state.dates, parsedResponse.data],
+                    
+                })
+                console.log('hitting add date')
+                this.setState({ state: this.state });
+            } else {
+                alert('we have an error')
+            }
+        } catch (err) {
+            console.log(err)
+        }
+    }
     render() {
         return(
             <div>
-
+                <CreateDateComponent dates={this.state.dates} addDate={this.addDate}/>
                 <HomeComponent getDates={this.getDates} dates={this.state.dates}/>
             </div>
         )
