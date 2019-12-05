@@ -19,6 +19,10 @@ class App extends Component {
     loggedIn: true
     })
   }
+  componentDidMount() {
+    
+  }
+
   render () {
     return (
       <main >
