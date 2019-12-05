@@ -8,7 +8,7 @@ class Login extends Component {
     constructor() {
         super();
         this.state= {
-            email: '',
+            username: '',
             password: '',
 
         }
@@ -23,7 +23,7 @@ class Login extends Component {
     //submit login form
     handleSubmit = async(e) => {
         e.preventDefault();
-        const loginResponse = await fetch(process.env.REACT_APP_API_URL +'/api/v1/admins/login', {
+        const loginResponse = await fetch(process.env.REACT_APP_API_URL +'/api/v1/users/login', {
             method: 'POST',
             body: JSON.stringify(this.state),
             credentials: 'include', //send a sesion cookie along with req
@@ -35,10 +35,10 @@ class Login extends Component {
 
         //validation
         if (parsedResponse.status.code === 200) {
-            this.props.logIn();
+            // this.props.logIn();
             console.log('success');
-            this.props.logIn();
-            this.props.history.push('/');
+            // this.props.logIn();
+            // this.props.history.push('/');
             //programatically change url using react-router
         } else {
             this.setState( {
@@ -50,9 +50,9 @@ class Login extends Component {
         return (
             <Form className="form" onSubmit={this.handleSubmit}>
                 <h4>Sign In</h4>
-                <Label className="ui colorthree header">Email</Label>
-                <Form.Input type="email" name="email" onChange={this.handleChange} required/>
-                <Label className="ui colorthree header">Password</Label>
+                <Label>Username</Label>
+                <Form.Input type="username" name="username" onChange={this.handleChange} required/>
+                <Label>Password</Label>
                 <Form.Input type="password" name="password" onChange={this.handleChange} required/>
                 <Button type="submit" className="ui color1 button"><Icon name="sign-in"/>Log In</Button> <br/>
                 { this.state.errorMsg ? <Message negative>{this.state.errorMsg}</Message> : null}

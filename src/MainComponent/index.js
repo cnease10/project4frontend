@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import HomeComponent from '../HomeComponent ';
 import Login from '../Login'
+import Register from '../Register'
 class MainComponent extends Component {
     constructor() {
         super();
@@ -32,6 +33,7 @@ class MainComponent extends Component {
         return(
             <div>
                 <Login />
+                <Register />
                 <HomeComponent getDates={this.getDates} dates={this.state.dates}/>
             </div>
         )
