@@ -19,6 +19,9 @@ class MainComponent extends Component {
         }
         
     }
+    // componentDidUpdate() {
+    //     this.getCreatedDates()
+    // }
     //GET ALL DATES
     getDates = async() => {
         try {
@@ -96,7 +99,7 @@ class MainComponent extends Component {
     openModal = (date) => {
         console.log(date)
         this.setState({
-            editModal: true,
+            editmodal: true,
             dateEdit: {
                 ...date
             }
@@ -105,7 +108,7 @@ class MainComponent extends Component {
     // CLOSE MODAL FOR EDIT
     close = async(e) => {
         e.preventDefault();
-
+        console.log('hittingclose')
         try{
             const editResponse = await fetch(process.env.REACT_APP_API_URL + '/api/v1/creates/' + this.state.dateEdit.id, {
                 method: 'PUT',
@@ -122,11 +125,12 @@ class MainComponent extends Component {
                 }
                 return date;
             })
+            console.log(newDateArray)
             this.setState({
                 userdates: newDateArray,
-                editModal: false,
+                editmodal: false,
             })
-            this.setState({ state: this.state });
+            // this.setState({ state: this.state });
         } catch(err) {
             console.log(err)
         }
@@ -153,7 +157,7 @@ class MainComponent extends Component {
     render() {
         return(
             <div>
-                {this.state.editmodal ? <EditDateComponent handleEdit={this.handleEdit} openModal={this.openModal} closeModal={this.close} dateEdit={this.state.dateEdit} /> : null }
+                {this.state.editmodal ? <EditDateComponent boolean={this.state.editmodal} handleEdit={this.handleEdit} closeModal={this.close} dateEdit={this.state.dateEdit} /> : null }
                 <CreateDateComponent userdates={this.state.userdates} addDate={this.addDate}/>
                 <HomeComponent getDates={this.getDates} dates={this.state.dates}/>
                 <UserDateList openModal={this.openModal} deleteDate={this.deletedate} userdates={this.state.userdates}/>
