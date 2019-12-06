@@ -166,7 +166,7 @@ class MainComponent extends Component {
                 userdates: newDateArray,
                 editmodal: false,
             })
-            // this.setState({ state: this.state });
+        this.getCreatedDates();
         } catch(err) {
             console.log(err)
         }
