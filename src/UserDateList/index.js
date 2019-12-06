@@ -5,6 +5,7 @@ import React from 'react'
 
 const UserDateList = (props) => {
     //get all userdates
+  
     const dates = props.userdates.map((date) => {
         return(
             <div>
@@ -15,6 +16,7 @@ const UserDateList = (props) => {
         )
             
     })
+    // props.createdDates()
     return(
         <div>
            HI I'M USERDATELIST {dates}

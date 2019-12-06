@@ -22,6 +22,7 @@ class Login extends Component {
     }
     //submit login form
     handleSubmit = async(e) => {
+        console.log('user submit being hit')
         e.preventDefault();
         const loginResponse = await fetch(process.env.REACT_APP_API_URL +'/api/v1/users/login', {
             method: 'POST',
@@ -37,11 +38,12 @@ class Login extends Component {
         if (parsedResponse.status.code === 200) {
             console.log('success');
             this.props.logIn();
+            console.log(this.props.logIn)
             this.props.history.push('/');
             //programatically change url using react-router
         } else {
             this.setState( {
-                errorMsg: parsedResponse.status.messa
+                errorMsg: parsedResponse.status.message
             });
         }
     }
@@ -53,9 +55,9 @@ class Login extends Component {
                 <Form.Input type="username" name="username" onChange={this.handleChange} required/>
                 <Label>Password</Label>
                 <Form.Input type="password" name="password" onChange={this.handleChange} required/>
-                <Button type="submit" className="ui color1 button"><Icon name="sign-in"/>Log In</Button> <br/>
+                <Button type="submit"><Icon name="sign-in"/>Log In</Button> <br/>
                 { this.state.errorMsg ? <Message negative>{this.state.errorMsg}</Message> : null}
-                <Link className="ui color1 button" to="/"><Icon name="arrow alternate circle left outline"/>Oops, take me back!</Link>
+                <Link to="/"><Icon name="arrow alternate circle left outline"/>Oops, take me back!</Link>
             </Form>
         )
     }

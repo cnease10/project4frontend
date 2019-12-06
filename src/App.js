@@ -20,16 +20,20 @@ class App extends Component {
     })
   }
   componentDidMount() {
+    console.log(this.state.loggedIn)
     
+  }
+  componentDidUpdate() {
+    console.log(this.state.loggedIn)
   }
 
   render () {
     return (
       <main >
         <Switch>
-          <Route exact path ='/' render={(props) => <MainComponent {...props} adminlogged={this.state.loggedIn}/>}/>
+          <Route exact path ='/' render={(props) => <MainComponent {...props} login={this.state.loggedIn}/>}/>
           <Route exact path='/userlogin'  render={(props) => <Login {...props} logIn={this.logIn}/>}/>
-          <Route exact path ='/newuser' component={Register} />
+          <Route exact path ='/newuser' render={(props) => <Register {...props} logIn={this.logIn}/>}/>
         </Switch>
       </main>
     )

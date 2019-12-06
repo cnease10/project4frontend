@@ -14,6 +14,7 @@ const HomeComponent = (props) => {
             <h1>DateRate</h1>
             <button  onClick={() => props.getDates()}>Find Date</button>
             {dates}
+            <button onClick={() => {props.getProfile(); props.getLogin(); props.createdDates() }}>Profile</button>
             <p>Returned date value</p>
         </div>
     )
