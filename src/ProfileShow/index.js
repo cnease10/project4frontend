@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {Button} from 'semantic-ui-react'
 
 class Profile extends Component {
     constructor(props) {
@@ -12,8 +13,8 @@ class Profile extends Component {
             return(
                 <div>
                     <h1 key={date.id}>{date.name}</h1>
-                    <button onClick={() => this.props.openModal(date)}>Edit</button>
-                    <button onClick={() => this.props.deleteDate(date.id)}>Delete</button>
+                    <Button onClick={() => this.props.openModal(date)}>Edit</Button>
+                    <Button onClick={() => this.props.deleteDate(date.id)}>Delete</Button>
                 </div>
             )
                 
@@ -22,7 +23,7 @@ class Profile extends Component {
             <div>
                 <h1>sup</h1>
                 <div>
-                    <button onClick={() => this.props.openAdd()}>Create New</button>
+                    <Button onClick={() => this.props.openAdd()}>Create New</Button>
                 </div>
                 {dates}
             </div>

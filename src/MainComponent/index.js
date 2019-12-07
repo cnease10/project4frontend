@@ -20,6 +20,7 @@ class MainComponent extends Component {
             login: false,
             profile: false,
             add: false,
+            randomdate: []
         }
         
     }
@@ -58,8 +59,14 @@ class MainComponent extends Component {
             });
             console.log(dates)
             const parsedDates = await dates.json();
+            const allDates = parsedDates.data
+            const rand = Math.random();
+            const totalDates = allDates.length;
+            const randIndex = Math.floor(rand * totalDates)
+            const randDate = allDates[randIndex]
             this.setState({
-                dates: parsedDates.data,
+                dates: allDates,
+                randomdate: randDate
             })
             console.log(parsedDates.data);
             console.log('hitting route')
@@ -196,7 +203,7 @@ class MainComponent extends Component {
             <div>
                 {this.state.editmodal ? <EditDateComponent boolean={this.state.editmodal} handleEdit={this.handleEdit} closeModal={this.close} dateEdit={this.state.dateEdit} /> : null }
                 {/* <CreateDateComponent userdates={this.state.userdates} addDate={this.addDate}/> */}
-                <HomeComponent createdDates={this.getCreatedDates} getLogin={this.getProfile} getProfile={this.getProfile} getDates={this.getDates} dates={this.state.dates}/>
+                <HomeComponent randDate={this.state.randomdate} createdDates={this.getCreatedDates} getLogin={this.getProfile} getProfile={this.getProfile} getDates={this.getDates} dates={this.state.dates}/>
                  {this.state.add ? <CreateDateComponent userdates={this.state.userdates} addDate={this.addDate}/> : null }
                 {/* <UserDateList openModal={this.openModal} deleteDate={this.deletedate} userdates={this.state.userdates}/> */}
                 {this.state.login ?  <Profile openAdd={this.openAdd} userdates={this.state.userdates} openModal={this.openModal} deleteDate={this.deletedate}  /> : null}

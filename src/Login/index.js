@@ -33,7 +33,7 @@ class Login extends Component {
             }
         });
         const parsedResponse = await loginResponse.json();
-
+        console.log(parsedResponse)
         //validation
         if (parsedResponse.status.code === 200) {
             console.log('success');
