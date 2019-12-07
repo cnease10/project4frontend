@@ -13,6 +13,7 @@ class Profile extends Component {
             return(
                 <div>
                     <h1 key={date.id}>{date.name}</h1>
+                    <h2>{date.description}</h2>
                     <Button onClick={() => this.props.openModal(date)}>Edit</Button>
                     <Button onClick={() => this.props.deleteDate(date.id)}>Delete</Button>
                 </div>

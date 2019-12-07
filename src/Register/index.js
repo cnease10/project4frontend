@@ -1,6 +1,7 @@
 //register page for new users - use react router dom
 import React, { Component } from 'react'
-import {Form, Label, Button, Message} from 'semantic-ui-react'
+import {Form, Label, Button, Message, Icon} from 'semantic-ui-react'
+import {Link} from 'react-router-dom'
 
 
 class Register extends Component {
@@ -52,6 +53,7 @@ class Register extends Component {
                 <Label >Password</Label>
                 <Form.Input type="password" name="password" onChange={this.handleChange} required/>
                 <Button type="submit">Sign Up</Button>
+                <Link to="/"><Icon name="arrow alternate circle left outline"/>Oops, take me back!</Link>
                 { this.state.errorMsg ? <Message negative>{this.state.errorMsg}</Message> : null}
             </Form>
         )
