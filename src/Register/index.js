@@ -46,8 +46,9 @@ class Register extends Component {
     }
     render() {
         return (
+            <div className="registerdiv">
             <Form className="form" onSubmit={this.handleSubmit}>
-                <h4>Register New User</h4>
+                <h4>Sign Up to Find or Plan Your Next Great Date Idea!</h4>
                 <Label >Username</Label>
                 <Form.Input type="username" name="username" onChange={this.handleChange} required/>
                 <Label >Password</Label>
@@ -56,6 +57,12 @@ class Register extends Component {
                 <Link to="/"><Icon name="arrow alternate circle left outline"/>Oops, take me back!</Link>
                 { this.state.errorMsg ? <Message negative>{this.state.errorMsg}</Message> : null}
             </Form>
+                <img alt="couple walking down the street"className='photo, padding' src="https://images.unsplash.com/photo-1556825410-c8fb2ae4f590?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"/>
+                <img alt="couple walking into forrest"className="photo" src="https://images.unsplash.com/photo-1440367850806-da68da359421?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"/>
+                <img alt="couple dancing" className="photo" src="https://images.unsplash.com/photo-1567373171107-244e1792695d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"/>
+                <img alt="couple kissing" className="photo" src="https://images.unsplash.com/photo-1542351682-8453e2495f97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"/>
+                
+          </div>  
         )
     }
 }

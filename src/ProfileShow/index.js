@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {Button} from 'semantic-ui-react'
-
+import './profile.css'
 class Profile extends Component {
     constructor(props) {
         super(props);
@@ -21,8 +21,8 @@ class Profile extends Component {
                 
         })
         return (
-            <div>
-                <h1>sup</h1>
+            <div className="profilediv">
+                <h1>Your dates</h1>
                 <div>
                     <Button onClick={() => this.props.openAdd()}>Create New</Button>
                 </div>

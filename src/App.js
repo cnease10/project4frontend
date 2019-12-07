@@ -29,7 +29,7 @@ class App extends Component {
 
   render () {
     return (
-      <main >
+      <main className="appdiv">
         <Switch>
           <Route exact path ='/' render={(props) => <MainComponent {...props} login={this.state.loggedIn}/>}/>
           <Route exact path='/userlogin'  render={(props) => <Login {...props} logIn={this.logIn}/>}/>

@@ -4,6 +4,7 @@ import CreateDateComponent from '../CreateDateComponent'
 import EditDateComponent from '../EditDateComponent'
 import UserDateList from '../UserDateList'
 import Profile from '../ProfileShow'
+import './main.css'
 
 class MainComponent extends Component {
     constructor(props) {
@@ -200,7 +201,7 @@ class MainComponent extends Component {
     render() {
         console.log(this.state.login)
         return(
-            <div>
+            <div className="maindiv">
                 {this.state.editmodal ? <EditDateComponent boolean={this.state.editmodal} handleEdit={this.handleEdit} closeModal={this.close} dateEdit={this.state.dateEdit} /> : null }
                 {/* <CreateDateComponent userdates={this.state.userdates} addDate={this.addDate}/> */}
                 <HomeComponent randDate={this.state.randomdate} createdDates={this.getCreatedDates} getLogin={this.getProfile} getProfile={this.getProfile} getDates={this.getDates} dates={this.state.dates}/>
