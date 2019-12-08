@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Button} from 'semantic-ui-react'
+import {Button, Icon} from 'semantic-ui-react'
 import './profile.css'
 class Profile extends Component {
     constructor(props) {
@@ -24,7 +24,7 @@ class Profile extends Component {
             <div className="profilediv">
                 <h1>Your dates</h1>
                 <div>
-                    <Button onClick={() => this.props.openAdd()}>Create New</Button>
+                    <Button onClick={() => this.props.openAdd()}><Icon name="sticky note outline"/>Create New</Button>
                 </div>
                 {dates}
             </div>

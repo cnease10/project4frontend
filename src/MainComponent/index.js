@@ -2,7 +2,6 @@ import React, {Component} from 'react'
 import HomeComponent from '../HomeComponent ';
 import CreateDateComponent from '../CreateDateComponent'
 import EditDateComponent from '../EditDateComponent'
-import UserDateList from '../UserDateList'
 import Profile from '../ProfileShow'
 import './main.css'
 
@@ -203,12 +202,10 @@ class MainComponent extends Component {
         return(
             <div className="maindiv">
                 {this.state.editmodal ? <EditDateComponent boolean={this.state.editmodal} handleEdit={this.handleEdit} closeModal={this.close} dateEdit={this.state.dateEdit} /> : null }
-                {/* <CreateDateComponent userdates={this.state.userdates} addDate={this.addDate}/> */}
                 <HomeComponent randDate={this.state.randomdate} createdDates={this.getCreatedDates} getLogin={this.getProfile} getProfile={this.getProfile} getDates={this.getDates} dates={this.state.dates}/>
                  {this.state.add ? <CreateDateComponent userdates={this.state.userdates} addDate={this.addDate}/> : null }
-                {/* <UserDateList openModal={this.openModal} deleteDate={this.deletedate} userdates={this.state.userdates}/> */}
                 {this.state.login ?  <Profile openAdd={this.openAdd} userdates={this.state.userdates} openModal={this.openModal} deleteDate={this.deletedate}  /> : null}
-                {/* <UserDateList  openModal={this.openModal} deleteDate={this.deletedate} userdates={this.state.userdates}/>  */}
+                
                
 
             </div>

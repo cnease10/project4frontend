@@ -10,3 +10,14 @@
     text-align: center;
     margin-left: 40px;
 }
+.ui.form.form {
+    width: 400px;
+}
+
+.ui.raised.segment{
+    width: 400px;
+    text-align: center;
+}
+a {
+    color: #494ca6;
+  }
