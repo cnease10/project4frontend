@@ -14,17 +14,17 @@ class Profile extends Component {
                 <div>
                     <h1 key={date.id}>{date.name}</h1>
                     <h2>{date.description}</h2>
-                    <Button onClick={() => this.props.openModal(date)}>Edit</Button>
-                    <Button onClick={() => this.props.deleteDate(date.id)}>Delete</Button>
+                    <Button className="buttonColor" onClick={() => this.props.openModal(date)}>Edit</Button>
+                    <Button className="buttonColor" onClick={() => this.props.deleteDate(date.id)}>Delete</Button>
                 </div>
             )
                 
         })
         return (
             <div className="profilediv">
-                <h1>Your dates</h1>
+                <h1 className="mainHeader">My Date Ideas</h1>
                 <div>
-                    <Button onClick={() => this.props.openAdd()}><Icon name="sticky note outline"/>Create New</Button>
+                    <Button className="buttonColor" onClick={() => this.props.openAdd()}><Icon name="sticky note outline"/>Create New</Button>
                 </div>
                 {dates}
             </div>

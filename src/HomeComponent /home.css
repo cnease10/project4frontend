@@ -14,8 +14,9 @@
 }
 .ui.button.buttonColor {
     background-color: #8186d5;
-    color: #e3e7f1; 
+    color: white; 
     font-weight: bold;
+    font-family: 'Solway', serif;
 }
 #center {
     text-align: center;

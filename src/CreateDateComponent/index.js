@@ -1,6 +1,6 @@
 //need a form that creates a date for logged in users
 import React, {Component} from 'react';
-import {Form, Button, Header,} from 'semantic-ui-react';
+import {Form, Button, Header, Segment} from 'semantic-ui-react';
 
 class AddDate extends Component {
     constructor() {
@@ -16,14 +16,16 @@ class AddDate extends Component {
     render() {
         return (
             <div>
+                <Segment textAlign="center" raised>
                 <Form onSubmit={(e) => this.props.addDate(e, this.state)}>
                     <h1>Add A Date!</h1>
                     <Header as="h2">Name:</Header>
                     <Form.Input focus type="text" name='name' value={this.state.name} onChange={this.handleChange}/>
                     <Header as="h2" >Description:</Header>
                     <Form.Input focus type="text" name='description' value={this.state.description} onChange={this.handleChange}/>
-                    <Button type="submit">Create Date</Button>
+                    <Button className="buttonColor" type="submit">Create Date</Button>
                 </Form>
+                </Segment>
             </div>
         )
     }

@@ -61,10 +61,10 @@ class Register extends Component {
                 <Form.Input type="username" name="username" onChange={this.handleChange} required/>
                 <Label >Password</Label>
                 <Form.Input type="password" name="password" onChange={this.handleChange} required/>
-                <Button type="submit">Sign Up</Button>
+                <Button className="buttonColor"type="submit">Sign Up</Button>
                 <p>Have an Account? <Link to="/userlogin">Login</Link></p> 
                 { this.state.errorMsg ? <Message negative>{this.state.errorMsg}</Message> : null}
-            <Link to="/"><Button><Icon name="arrow alternate circle left outline"/>Back to Home</Button></Link>
+            <Link to="/"><Button className="buttonColor"><Icon name="arrow alternate circle left outline"/>Back to Home</Button></Link>
             </Form>
             </Segment>
                         </Grid.Column>

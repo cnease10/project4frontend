@@ -66,25 +66,24 @@ class Login extends Component {
                 <Form.Input type="username" name="username" onChange={this.handleChange} required/>
                 <Label>Password</Label>
                 <Form.Input type="password" name="password" onChange={this.handleChange} required/>
-                <Button type="submit"><Icon name="sign-in"/>Log In</Button> 
+                <Button className="buttonColor" type="submit"><Icon name="sign-in"/>Log In</Button> 
                 <p>Not Registered? Register <Link to="/newuser"> Here </Link></p> 
                 { this.state.errorMsg ? <Message negative>{this.state.errorMsg}</Message> : null}
-                <Link to="/"><Button><Icon name="arrow alternate circle left outline"/>Back to Home</Button></Link>
+                <Link to="/"><Button className="buttonColor"><Icon name="arrow alternate circle left outline"/>Back to Home</Button></Link>
             </Form>
             </Segment>
                         </Grid.Column>
                         <Grid.Column></Grid.Column>
                     </Grid.Row>
-                </Grid>
-               
-            
-               
-               
-                 
+                    <Grid.Row>
+
+                    </Grid.Row>
+              
                 {/* <img alt="couple walking down the street"className='photo, padding' src="https://images.unsplash.com/photo-1431037242647-4c2c27cb5bb1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"/>
                 <img alt="couple walking into forrest"className="photo" src="https://images.unsplash.com/photo-1440367850806-da68da359421?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"/>
                 <img alt="couple dancing" className="photo" src="https://images.unsplash.com/photo-1567373171107-244e1792695d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"/>
                 <img alt="couple kissing" className="photo" src="https://images.unsplash.com/photo-1542351682-8453e2495f97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"/> */}
+                </Grid>
                 
             </div>
         )
