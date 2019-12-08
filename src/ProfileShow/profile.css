@@ -3,3 +3,13 @@
     background-color: #c6cbef;
     font-family: 'Solway', serif;
 }
+.ui.raised.segment.segmentSpacer {
+    margin: 10px;
+    
+}
+
+.dateHeader {
+    font-weight: bold;
+    color: #494ca6;
+    font-family: 'Solway', serif;
+}

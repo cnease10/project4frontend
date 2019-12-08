@@ -196,13 +196,17 @@ class MainComponent extends Component {
             alert('there is an issue');
         }
     }
+    //USER SIGN UP WARNING
+    // warning = async() => {
+    //     this.state.login ? 
+    // }
     
     render() {
         console.log(this.state.login)
         return(
             <div className="maindiv">
                 {this.state.editmodal ? <EditDateComponent boolean={this.state.editmodal} handleEdit={this.handleEdit} closeModal={this.close} dateEdit={this.state.dateEdit} /> : null }
-                <HomeComponent randDate={this.state.randomdate} createdDates={this.getCreatedDates} getLogin={this.getProfile} getProfile={this.getProfile} getDates={this.getDates} dates={this.state.dates}/>
+                <HomeComponent logIn={this.state.login} randDate={this.state.randomdate} createdDates={this.getCreatedDates} getLogin={this.getProfile} getProfile={this.getProfile} getDates={this.getDates} dates={this.state.dates}/>
                  {this.state.add ? <CreateDateComponent userdates={this.state.userdates} addDate={this.addDate}/> : null }
                 {this.state.login ?  <Profile openAdd={this.openAdd} userdates={this.state.userdates} openModal={this.openModal} deleteDate={this.deletedate}  /> : null}
                 

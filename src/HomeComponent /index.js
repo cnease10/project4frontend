@@ -8,7 +8,7 @@ const HomeComponent = (props) => {
     return(
         
         <div className='homediv'>
-            <Navbar  expand="lg" className="navcolor">
+            <Navbar  expand="md" className="navcolor">
                 <Navbar.Brand href="#home">Find-A-Date<Icon name="checked calendar"/></Navbar.Brand>
                  <Navbar.Toggle aria-controls="basic-navbar-nav" />
                  <Navbar.Collapse id="basic-navbar-nav">
@@ -25,8 +25,8 @@ const HomeComponent = (props) => {
                     </Nav.Item>
                 </Nav>
                 </Navbar.Collapse>
+                <Button className="buttonColor"onClick={() => {props.getProfile(); props.getLogin(); props.createdDates() }}><Icon name="list"/>My Dates</Button>
             </Navbar>
-            <Button className="buttonColor"onClick={() => {props.getProfile(); props.getLogin(); props.createdDates() }}>My Dates</Button> 
             <h1 className="mainHeader">Find-A-Date<Icon name="checked calendar"/></h1>
             <p className="catchphrase">Do you ever get tired of trying to come up with date ideas? <br/>
                 Find-A-Date is here to help! <br/>
@@ -42,7 +42,7 @@ const HomeComponent = (props) => {
             <h1 className="genDateName">{props.randDate.name}</h1>
             <h2 className="genDateDesc">{props.randDate.description}</h2>
             </Container>
-            <Button className="buttonColor"onClick={() => {props.getProfile(); props.getLogin(); props.createdDates() }}>My Dates</Button> 
+            {/* <Button className="buttonColor"onClick={() => {props.getProfile(); props.getLogin(); props.createdDates() }}>My Dates</Button>  */}
         </div>
     )
 }
