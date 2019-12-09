@@ -52,7 +52,7 @@ class Register extends Component {
 
                     </Grid.Row>
                     <Grid.Row>
-                        <Grid.Column></Grid.Column>
+                        <Grid.Column width={0}></Grid.Column>
                         <Grid.Column>
                         <Segment placeholder raised purple>
                             <Grid columns={2} stackable textAlign='center'>
@@ -60,7 +60,7 @@ class Register extends Component {
 
                             <Grid.Row verticalAlign='middle'>
                             <Grid.Column >
-                                <img className="loginPic" src="https://images.unsplash.com/photo-1514446750685-c27ac87a4403?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"></img>
+                                <img alt="couple holding hand"className="loginPic" src="https://images.unsplash.com/photo-1514446750685-c27ac87a4403?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"></img>
                             <h4 className="whiteh4">Find-A-Date<Icon name="checked calendar"/></h4>
                             </Grid.Column>
 
@@ -82,7 +82,7 @@ class Register extends Component {
                  
             
                         </Grid.Column>
-                        <Grid.Column></Grid.Column>
+                        <Grid.Column width={0}></Grid.Column>
                     </Grid.Row>
                 </Grid>
                 {/* <h4 className="mainHeader">Sign Up to Find or Plan Your Next Great Date Idea!</h4> */}

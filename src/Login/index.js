@@ -55,7 +55,7 @@ class Login extends Component {
 
                     </Grid.Row>
                     <Grid.Row>
-                        <Grid.Column></Grid.Column>
+                        <Grid.Column width={0}></Grid.Column>
                         <Grid.Column>
 
                         <Segment placeholder raised purple>
@@ -85,6 +85,7 @@ class Login extends Component {
                         </Segment>   
             
                         </Grid.Column>
+                        <Grid.Column width={0}></Grid.Column>
                     </Grid.Row>
               
                 {/* <img alt="couple walking down the street"className='photo, padding' src="https://images.unsplash.com/photo-1431037242647-4c2c27cb5bb1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"/>
