@@ -1,6 +1,6 @@
 //register page for new users - use react router dom
 import React, { Component } from 'react'
-import {Form, Label, Button, Message, Icon, Segment, Container, Grid} from 'semantic-ui-react'
+import {Form, Label, Button, Message, Icon, Segment, Container, Grid, Divider} from 'semantic-ui-react'
 import {Link} from 'react-router-dom'
 
 
@@ -54,19 +54,33 @@ class Register extends Component {
                     <Grid.Row>
                         <Grid.Column></Grid.Column>
                         <Grid.Column>
+                        <Segment placeholder raised purple>
+                            <Grid columns={2} stackable textAlign='center'>
+                            <Divider vertical></Divider>
 
-                 <Segment textAlign="center" raised>
-            <Form className="form" onSubmit={this.handleSubmit}>
-                <Label >Username</Label>
-                <Form.Input type="username" name="username" onChange={this.handleChange} required/>
-                <Label >Password</Label>
-                <Form.Input type="password" name="password" onChange={this.handleChange} required/>
-                <Button className="buttonColor"type="submit">Sign Up</Button>
-                <p>Have an Account? <Link to="/userlogin">Login</Link></p> 
-                { this.state.errorMsg ? <Message negative>{this.state.errorMsg}</Message> : null}
-            <Link to="/"><Button className="buttonColor"><Icon name="arrow alternate circle left outline"/>Back to Home</Button></Link>
-            </Form>
-            </Segment>
+                            <Grid.Row verticalAlign='middle'>
+                            <Grid.Column >
+                                <img className="loginPic" src="https://images.unsplash.com/photo-1514446750685-c27ac87a4403?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"></img>
+                            <h4 className="whiteh4">Find-A-Date<Icon name="checked calendar"/></h4>
+                            </Grid.Column>
+
+                            <Grid.Column>
+                                <Form className="form" onSubmit={this.handleSubmit}>
+                                    <Label>Username</Label>
+                                        <Form.Input type="username" name="username" onChange={this.handleChange} required/>
+                                    <Label>Password</Label>
+                                        <Form.Input type="password" name="password" onChange={this.handleChange} required/> 
+                                    <Button className="buttonColor"type="submit">Sign Up</Button>
+                                    <p>Already a User? <Link to="/userlogin">Login</Link></p>
+                                        { this.state.errorMsg ? <Message negative>{this.state.errorMsg}</Message> : null}
+                                     <Link to="/"><Button className="buttonColor" ><Icon name="arrow alternate circle left outline"/>Back to Home</Button></Link>
+                                </Form>
+                            </Grid.Column>
+                            </Grid.Row>
+                            </Grid>
+                        </Segment>   
+                 
+            
                         </Grid.Column>
                         <Grid.Column></Grid.Column>
                     </Grid.Row>

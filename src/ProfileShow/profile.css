@@ -13,3 +13,23 @@
     color: #494ca6;
     font-family: 'Solway', serif;
 }
+
+.ui.button.buttonColorCenter {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px; 
+    background-color: #8186d5;
+    color: white; 
+    font-weight: bold;
+    font-family: 'Solway', serif;
+}
+.ui.button.buttonColorCenter:hover {
+    background-color: #494ca2;
+}
+.ui.button.buttonColorCenter:active {
+    background-color: #e3e7f1;
+    box-shadow: 0 5px #8186d5;
+    transform: translateY(4px);
+  }

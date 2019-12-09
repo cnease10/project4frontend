@@ -18,6 +18,14 @@
     font-weight: bold;
     font-family: 'Solway', serif;
 }
+.ui.button.buttonColor:hover {
+    background-color: #494ca2;
+}
+.ui.button.buttonColor:active {
+    background-color: #e3e7f1;
+    box-shadow: 0 5px #8186d5;
+    transform: translateY(4px);
+  }
 #center {
     text-align: center;
 }

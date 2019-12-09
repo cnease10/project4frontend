@@ -2,6 +2,12 @@
     height: 65vh;
     text-align: center;
 }
+.loginPic {
+    border-radius: 7px;
+}
+.ui.placeholder.raised.segment {
+    background-color: #8186d5;
+}
 .logindiv {
     background-color: #c6cbef;
     height: 100vh;
@@ -20,5 +26,25 @@
     text-align: center;
 }
 a {
-    color: #494ca6;
+    color: white;
   }
+
+  .ui.button.buttonColor {
+    background-color: #8186d5;
+    color: white; 
+    font-weight: bold;
+    font-family: 'Solway', serif;
+}
+.ui.button.buttonColor:hover {
+    background-color: #494ca2;
+}
+.ui.button.buttonColor:active {
+    background-color: #e3e7f1;
+    box-shadow: 0 5px #8186d5;
+    transform: translateY(4px);
+  }
+
+.whiteh4{
+    color: white;
+    font-family: 'Solway', serif;
+}

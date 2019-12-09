@@ -15,8 +15,8 @@ class Profile extends Component {
                     <Segment className="segmentSpacer" raised>    
                     <h1 className="dateHeader"key={date.id}>{date.name}</h1>
                     <p>{date.description}</p>
-                    <Button className="buttonColor" onClick={() => this.props.openModal(date)}>Edit</Button>
-                    <Button className="buttonColor" onClick={() => this.props.deleteDate(date.id)}>Delete</Button>
+                    <Button className="buttonColor" onClick={() => this.props.openModal(date)}><Icon name="edit outline"/>Edit</Button>
+                    <Button className="buttonColor" onClick={() => this.props.deleteDate(date.id)}><Icon name="delete"/>Delete</Button>
                     </Segment>   
               
             )
@@ -28,10 +28,10 @@ class Profile extends Component {
                    <Grid.Row>
                         <Grid.Column></Grid.Column>   
                         <Grid.Column> */}
-                            <h1 className="mainHeader">My Date Ideas</h1>
+                            <h1 className="mainHeader">My Date Ideas <Icon name="idea"/></h1>
                         {/* </Grid.Column>   
                         <Grid.Column> */}
-                            <Button className="buttonColor" onClick={() => this.props.openAdd()}><Icon name="sticky note outline"/>Create New</Button>
+                            <Button className="buttonColorCenter" onClick={() => this.props.openAdd()}><Icon name="sticky note outline"/>Create New</Button>
                         {/* </Grid.Column>   
                    </Grid.Row>         
                 </Grid> */}

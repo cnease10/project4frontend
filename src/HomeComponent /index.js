@@ -33,7 +33,7 @@ const HomeComponent = (props) => {
                 Click Find A Date Idea to get a fun date idea.
             </p>
             <Container textAlign="center">
-            <Button className="buttonColor"onClick={() => props.getDates()}>Find A Date Idea</Button>
+            <Button className="buttonColor"onClick={() => props.getDates()}><Icon name="idea"/>Find A Date Idea</Button>
             </Container>
             {/* <Button className="buttonColor"onClick={() => {props.getProfile(); props.getLogin(); props.createdDates() }}>My Dates</Button> <br/>
             <Button className="buttonColor"onClick={() => props.getDates()}>Find Date Idea</Button> */}
