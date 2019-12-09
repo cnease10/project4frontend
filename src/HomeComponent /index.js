@@ -4,23 +4,23 @@ import {Navbar, Nav, NavDropdown} from 'react-bootstrap'
 import './home.css'
 
 const HomeComponent = (props) => {
-
+  
     return(
         
         <div className='homediv'>
             <Navbar  expand="md" className="navcolor">
-                <Navbar.Brand href="#home">Find-A-Date<Icon name="checked calendar"/></Navbar.Brand>
+                <Navbar.Brand className="brand" href="#home">Find-A-Date<Icon name="checked calendar"/></Navbar.Brand>
                  <Navbar.Toggle aria-controls="basic-navbar-nav" />
                  <Navbar.Collapse id="basic-navbar-nav">
             
                  <Nav className="justify-content-end" activeKey="/home">
                     <Nav.Item>
-                        <Nav.Link href="/"><Icon name="home"></Icon>Home</Nav.Link>
+                        <Nav.Link id="navitem" href="/"><Icon name="home"></Icon>Home</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                        <NavDropdown title="Users" id="basic-nav-dropdown">
-                        <NavDropdown.Item href="/userlogin"><Icon name="sign-in"/>Login</NavDropdown.Item>
-                        <NavDropdown.Item href="/newuser"><Icon name="add user"/>Register</NavDropdown.Item>
+                        <NavDropdown id="navitem" title="Users" >
+                        <NavDropdown.Item  id="navitem" href="/userlogin"><Icon name="sign-in"/>Login</NavDropdown.Item>
+                        <NavDropdown.Item  id="navitem" href="/newuser"><Icon name="add user"/>Register</NavDropdown.Item>
                         </NavDropdown>
                     </Nav.Item>
                 </Nav>

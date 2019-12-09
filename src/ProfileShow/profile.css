@@ -1,16 +1,17 @@
 .profilediv {
     height: 100vh;
-    background-color: #c6cbef;
+    background-color: #fefed5;
     font-family: 'Solway', serif;
 }
 .ui.raised.segment.segmentSpacer {
     margin: 10px;
+    /* background: #81E0FF; */
     
 }
 
 .dateHeader {
     font-weight: bold;
-    color: #494ca6;
+    color: #35d0ba;
     font-family: 'Solway', serif;
 }
 
@@ -20,16 +21,16 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 10px; 
-    background-color: #8186d5;
+    background-color: #ff9234;
     color: white; 
     font-weight: bold;
     font-family: 'Solway', serif;
 }
 .ui.button.buttonColorCenter:hover {
-    background-color: #494ca2;
+    background-color: #ffcd3c;
 }
 .ui.button.buttonColorCenter:active {
-    background-color: #e3e7f1;
-    box-shadow: 0 5px #8186d5;
+    background-color: #ff9234;
+    box-shadow: 0 5px #ffcd3c;
     transform: translateY(4px);
   }

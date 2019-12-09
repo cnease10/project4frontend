@@ -64,7 +64,7 @@ class Login extends Component {
 
                             <Grid.Row verticalAlign='middle'>
                             <Grid.Column >
-                                <img className="loginPic" src="https://images.unsplash.com/photo-1514446750685-c27ac87a4403?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"></img>
+                                <img alt="" className="loginPic" src="https://images.unsplash.com/photo-1514446750685-c27ac87a4403?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"></img>
                             <h4 className="whiteh4">Find-A-Date<Icon name="checked calendar"/></h4>
                             </Grid.Column>
 

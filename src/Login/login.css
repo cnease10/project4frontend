@@ -4,12 +4,16 @@
 }
 .loginPic {
     border-radius: 7px;
+    /* height: 300px;
+    width: 100%; */
 }
 .ui.placeholder.raised.segment {
-    background-color: #8186d5;
+    background-color: #35d0ba;
+    /* height: 60vh;
+    width: 100%; */
 }
 .logindiv {
-    background-color: #c6cbef;
+    background-color: #fefed5;
     height: 100vh;
 }
 .padding {
@@ -20,7 +24,10 @@
 .ui.form.form {
     width: 400px;
 }
-
+.ui.label {
+    background-color: #ff9234;
+    color: white;
+}
 .ui.raised.segment{
     width: 400px;
     text-align: center;
@@ -30,17 +37,17 @@ a {
   }
 
   .ui.button.buttonColor {
-    background-color: #8186d5;
+    background-color: #ffcd3c;
     color: white; 
     font-weight: bold;
     font-family: 'Solway', serif;
 }
 .ui.button.buttonColor:hover {
-    background-color: #494ca2;
+    background-color: #ffcd3c;
 }
 .ui.button.buttonColor:active {
-    background-color: #e3e7f1;
-    box-shadow: 0 5px #8186d5;
+    background-color: #ff9234;
+    box-shadow: 0 5px #ffcd3c;
     transform: translateY(4px);
   }
 
