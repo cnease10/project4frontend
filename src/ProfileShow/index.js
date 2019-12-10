@@ -23,7 +23,7 @@ class Profile extends Component {
                 
         })
         return (
-            <div className="profilediv">
+            <React.Fragment className="profilediv">
                
                 <h1 className="mainHeader">My Date Ideas <Icon name="idea"/></h1>
                       
@@ -38,7 +38,7 @@ class Profile extends Component {
                 </Grid>
                 
                
-            </div>
+            </React.Fragment>
         )
     }
 }

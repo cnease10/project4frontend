@@ -1,6 +1,6 @@
 //register page for new users - use react router dom
 import React, { Component } from 'react'
-import {Form, Label, Button, Message, Icon, Segment, Container, Grid, Divider} from 'semantic-ui-react'
+import {Form, Label, Button, Message, Icon, Segment, Grid, Divider} from 'semantic-ui-react'
 import {Link} from 'react-router-dom'
 
 
@@ -46,7 +46,7 @@ class Register extends Component {
     }
     render() {
         return (
-            <div  className="logindiv">
+            <React.Fragment className="logindiv">
  
                         
                         <Segment placeholder raised purple>
@@ -75,7 +75,7 @@ class Register extends Component {
                             </Grid>
                         </Segment>   
             
-          </div>  
+          </React.Fragment>  
         )
     }
 }

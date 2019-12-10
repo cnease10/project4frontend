@@ -24,22 +24,7 @@ class MainComponent extends Component {
         }
         
     }
-    // componentDidMount() {
-      
-    // }
-    // // componentDidUpdate() {
-    //     this.getCreatedDates()
-    // }
-    //CHECK LOGIN 
-    // getLoginPage = () => {
-    //     if (this.props.login === true ) {
-    //         this.setState({
-    //             login: true,
-
-    //         })
-    //     } 
-    //     console.log(this.state.login)
-    // }
+    //GET USER PROFILE COMPONENT
     getProfile = () => {
         if (this.props.login === true ) {
                 this.setState({
@@ -57,7 +42,7 @@ class MainComponent extends Component {
                credentials: 'include',
                method: 'GET' 
             });
-            console.log(dates)
+            // console.log(dates)
             const parsedDates = await dates.json();
             const allDates = parsedDates.data
             const rand = Math.random();
@@ -68,10 +53,10 @@ class MainComponent extends Component {
                 dates: allDates,
                 randomdate: randDate
             })
-            console.log(parsedDates.data);
-            console.log('hitting route')
+            // console.log(parsedDates.data);
+            // console.log('hitting route')
         } catch (err) {
-            console.log(err);
+            // console.log(err);
         }
 
     }
@@ -88,8 +73,8 @@ class MainComponent extends Component {
             this.setState({
                 userdates: parsedDates.data,
             })
-            console.log(parsedDates.data);
-            console.log('hitting route')
+            // console.log(parsedDates.data);
+            // console.log('hitting route')
             // this.getLoginPage()
         } catch (err) {
             console.log(err);
@@ -196,21 +181,17 @@ class MainComponent extends Component {
             alert('there is an issue');
         }
     }
-    //USER SIGN UP WARNING
-    // warning = async() => {
-    //     this.state.login ? 
-    // }
     
     render() {
         console.log(this.state.login)
         return(
-            <div className="maindiv">
+            <React.Fragment className="maindiv">
                 <HomeComponent logIn={this.state.login} randDate={this.state.randomdate} createdDates={this.getCreatedDates} getLogin={this.getProfile} getProfile={this.getProfile} getDates={this.getDates} dates={this.state.dates}/>
                  {this.state.add ? <CreateDateComponent userdates={this.state.userdates} addDate={this.addDate}/> : null }
                 {this.state.login ?  <Profile openAdd={this.openAdd} userdates={this.state.userdates} openModal={this.openModal} deleteDate={this.deletedate}  /> : null}
                 {this.state.editmodal ? <EditDateComponent boolean={this.state.editmodal} handleEdit={this.handleEdit} closeModal={this.close} dateEdit={this.state.dateEdit} /> : null }
 
-            </div>
+            </React.Fragment>
         )
     }
 }

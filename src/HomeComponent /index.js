@@ -1,5 +1,5 @@
 import React from 'react'
-import {Button, Container, Icon,} from 'semantic-ui-react'
+import {Button, Icon} from 'semantic-ui-react'
 import {Navbar, Nav, NavDropdown, Carousel, OverlayTrigger, Tooltip} from 'react-bootstrap'
 import './home.css'
 
@@ -10,7 +10,7 @@ const HomeComponent = (props) => {
       }
     return(
         
-        <div className='homediv'>
+        <React.Fragment className='homediv'>
              
             <Navbar  expand="md" className="navcolor">
                 <Navbar.Brand className="brand" href="#home">Find-A-Date<Icon name="checked calendar"/></Navbar.Brand>
@@ -162,7 +162,7 @@ const HomeComponent = (props) => {
             <h3 className="genDateDesc">{props.randDate.description}</h3>
            
        
-        </div>
+        </React.Fragment>
     )
 }
 
