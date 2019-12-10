@@ -24,25 +24,19 @@ class Profile extends Component {
         })
         return (
             <div className="profilediv">
-                {/* <Grid columns={3}>
-                   <Grid.Row>
-                        <Grid.Column></Grid.Column>   
-                        <Grid.Column> */}
-                            <h1 className="mainHeader">My Date Ideas <Icon name="idea"/></h1>
-                        {/* </Grid.Column>   
-                        <Grid.Column> */}
-                            <Button className="buttonColorCenter" onClick={() => this.props.openAdd()}><Icon name="sticky note outline"/>Create New</Button>
-                        {/* </Grid.Column>   
-                   </Grid.Row>         
-                </Grid> */}
+               
+                <h1 className="mainHeader">My Date Ideas <Icon name="idea"/></h1>
+                      
+                <Button className="buttonColorCenter" onClick={() => this.props.openAdd()}><Icon name="sticky note outline"/>Create New</Button>
+                     
                    
                 <Grid >
                     
-                           {dates} 
+                {dates} 
                     
                         
                 </Grid>
-                  
+                
                
             </div>
         )

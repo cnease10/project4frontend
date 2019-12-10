@@ -4,17 +4,19 @@
 }
 .loginPic {
     border-radius: 7px;
-    /* height: 300px;
-    width: 100%; */
+
 }
 .ui.placeholder.raised.segment {
     background-color: #35d0ba;
-    /* height: 60vh;
-    width: 100%; */
+   
 }
 .logindiv {
     background-color: #fefed5;
     height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+  
 }
 .padding {
     height: 65vh;

@@ -16,10 +16,7 @@ class AddDate extends Component {
     render() {
         return (
             
-                <Grid columns={3}>
-                <Grid.Row>
-                    <Grid.Column></Grid.Column>
-                    <Grid.Column>
+               
                         <Segment textAlign="center" raised>
                             <Form onSubmit={(e) => this.props.addDate(e, this.state)}>
                                 <h1>Add A Date!</h1>
@@ -30,11 +27,7 @@ class AddDate extends Component {
                                 <Button className="buttonColor" type="submit">Create Date</Button>
                             </Form>
                         </Segment>
-                    </Grid.Column>
-                    <Grid.Column></Grid.Column>
-                </Grid.Row>
-               </Grid> 
-            
+                  
         )
     }
 }
