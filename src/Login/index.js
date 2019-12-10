@@ -49,7 +49,7 @@ class Login extends Component {
     }
     render() {
         return (
-            <React.Fragment className="logindiv">
+            <div className="logindiv">
                
 
                         <Segment placeholder raised purple>
@@ -78,7 +78,7 @@ class Login extends Component {
                             </Grid>
                         </Segment>   
             
-               </React.Fragment>
+               </div>
         )
     }
 }

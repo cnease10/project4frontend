@@ -4,7 +4,7 @@ import {Form, Button, Header, Modal } from 'semantic-ui-react';
 
 const EditDog = (props) => {
         return (
-            <Modal open={props.boolean}>
+            <Modal textAlign="center" open={props.boolean}>
                 <h1>Edit A Date!</h1>
                 <Modal.Content>
                 <Form onSubmit={props.closeModal}>
@@ -12,7 +12,7 @@ const EditDog = (props) => {
                     <Form.Input type="text" name='name' value={props.dateEdit.name} onChange={props.handleEdit}/>
                     <Header as="h2" >Description:</Header>
                     <Form.Input type="text" name='description' value={props.dateEdit.description} onChange={props.handleEdit}/>
-                    <Button type="submit">Edit Date</Button>
+                    <Button className="buttonColor" type="submit">Edit Date</Button>
                 </Form>
                 </Modal.Content>
             </Modal>
