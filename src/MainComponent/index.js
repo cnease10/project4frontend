@@ -105,14 +105,14 @@ class MainComponent extends Component {
                     userdates: [...this.state.userdates, parsedResponse.data],
                     add: false
                 })
-                console.log('hitting add date')
+                // console.log('hitting add date')
                 this.setState({ state: this.state });
 
             } else {
                 alert('we have an error')
             }
         } catch (err) {
-            console.log(err)
+            // console.log(err)
         }
     }
     //EDIT USER DATE
@@ -125,7 +125,7 @@ class MainComponent extends Component {
     }
     //OPEN MODAL FOR EDIT
     openModal = (date) => {
-        console.log(date)
+        // console.log(date)
         this.setState({
             editmodal: true,
             dateEdit: {
@@ -136,7 +136,7 @@ class MainComponent extends Component {
     // CLOSE MODAL FOR EDIT
     close = async(e) => {
         e.preventDefault();
-        console.log('hittingclose')
+        // console.log('hittingclose')
         try{
             const editResponse = await fetch(process.env.REACT_APP_API_URL + '/api/v1/creates/' + this.state.dateEdit.id, {
                 method: 'PUT',
@@ -153,14 +153,14 @@ class MainComponent extends Component {
                 }
                 return date;
             })
-            console.log(newDateArray)
+            // console.log(newDateArray)
             this.setState({
                 userdates: newDateArray,
                 editmodal: false,
             })
         this.getCreatedDates();
         } catch(err) {
-            console.log(err)
+            // console.log(err)
         }
     }
 
@@ -171,19 +171,19 @@ class MainComponent extends Component {
             credentials: 'include'
         });
         const deleteResponseParsed = await deleteResponse.json();
-        console.log(deleteResponseParsed)
+        // console.log(deleteResponseParsed)
         if (deleteResponseParsed.status.code === 200) {
             this.setState({
                 userdates: this.state.userdates.filter((date) => date.id !== dateId),
                 })
-        console.log('hitting delete after set state')
+        // console.log('hitting delete after set state')
         } else {
             alert('there is an issue');
         }
     }
     
     render() {
-        console.log(this.state.login)
+        // console.log(this.state.login)
         return(
             <React.Fragment className="maindiv">
                 <HomeComponent logIn={this.state.login} randDate={this.state.randomdate} createdDates={this.getCreatedDates} getLogin={this.getProfile} getProfile={this.getProfile} getDates={this.getDates} dates={this.state.dates}/>
