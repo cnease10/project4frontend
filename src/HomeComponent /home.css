@@ -77,30 +77,13 @@
 a.brand.navbar-brand {
     color: #35d0ba;
 }
-a.dropdown-toggle.nav-link {
-    color: #35d0ba;
-}
-a.nav-link {
-    color: #35d0ba;
-}
-#basic-navbar-nav {
-    color: #35d0ba;
-}
-.navbar-light.navbar-nav.nav-link {
-    color: #35d0ba;
-}
 #navitem {
     color: #35d0ba;
 }
-.navbar-nav.navlink{
+.home.icon {
     color: #35d0ba;
 }
-div.nav-item {
-    color: #35d0ba;
-}
-div.dropdown.nav-item {
-    color: #35d0ba;
-}
-a.blue.nav-link {
+
+#nav-dropdown{
     color: #35d0ba;
 }

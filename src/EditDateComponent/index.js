@@ -2,7 +2,7 @@
 import React from 'react';
 import {Form, Button, Header, Modal } from 'semantic-ui-react';
 
-const EditDog = (props) => {
+const EditDate = (props) => {
         return (
             <Modal textAlign="center" open={props.boolean}>
                 <h1>Edit A Date!</h1>
@@ -19,4 +19,4 @@ const EditDog = (props) => {
         )
 }
 
-export default EditDog
+export default EditDate

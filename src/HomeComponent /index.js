@@ -4,7 +4,9 @@ import {Navbar, Nav, NavDropdown, Carousel, OverlayTrigger, Tooltip} from 'react
 import './home.css'
 
 const HomeComponent = (props) => {
-
+    const aStyle = {
+        color: "#35d0ba"
+      };
       function renderTooltip(props) {
         return <Tooltip {...props}>Login to See Your Dates</Tooltip>;
       }
@@ -13,21 +15,21 @@ const HomeComponent = (props) => {
         <React.Fragment className='homediv'>
              
             <Navbar  expand="md" className="navcolor">
-                <Navbar.Brand className="brand" href="#home">Find-A-Date<Icon name="checked calendar"/></Navbar.Brand>
+                <Navbar.Brand className="brand" href="/">Find-A-Date<Icon name="checked calendar"/></Navbar.Brand>
                  <Navbar.Toggle aria-controls="basic-navbar-nav" />
                  <Navbar.Collapse id="basic-navbar-nav">
             
-                 <Nav className="justify-content-end" activeKey="/home">
+                 {/* <Nav className="justify-content-end" activeKey="/home"> */}
+                    {/* <Nav.Item>
+                        <Nav.Link style={aStyle} id="navitem" href="/"><Icon name="home"></Icon>Home</Nav.Link>
+                    </Nav.Item> */}
                     <Nav.Item>
-                        <Nav.Link className="blue"id="navitem" href="/"><Icon name="home"></Icon>Home</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                        <NavDropdown className="blue" id="navitem" title="Users" >
+                        <NavDropdown style={aStyle}  title="Users" id="nav-dropdown" >
                         <NavDropdown.Item  id="navitem" href="/userlogin"><Icon name="sign-in"/>Login</NavDropdown.Item>
                         <NavDropdown.Item  id="navitem" href="/newuser"><Icon name="add user"/>Register</NavDropdown.Item>
                         </NavDropdown>
                     </Nav.Item>
-                </Nav>
+                {/* </Nav> */}
                 </Navbar.Collapse>
                 <OverlayTrigger
                 placement="bottom"
