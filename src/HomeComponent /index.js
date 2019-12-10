@@ -30,8 +30,8 @@ const HomeComponent = (props) => {
                 </Nav>
                 </Navbar.Collapse>
                 <OverlayTrigger
-                placement="right"
-                delay={{ show: 250, hide: 1000 }}
+                placement="bottom"
+                delay={{ show: 250, hide: 700 }}
                 overlay={renderTooltip}
                 >
                 <Button className="buttonColor"onClick={() => {props.getProfile(); props.getLogin(); props.createdDates() }}><Icon name="list"/>My Dates</Button>
