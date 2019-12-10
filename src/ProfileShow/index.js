@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Button, Icon, Grid, Container, Segment} from 'semantic-ui-react'
+import {Button, Icon, Grid, Segment} from 'semantic-ui-react'
 import './profile.css'
 class Profile extends Component {
     constructor(props) {

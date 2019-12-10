@@ -19,13 +19,13 @@ class App extends Component {
     loggedIn: true
     })
   }
-  componentDidMount() {
-    console.log(this.state.loggedIn)
+  // componentDidMount() {
+  //   console.log(this.state.loggedIn)
     
-  }
-  componentDidUpdate() {
-    console.log(this.state.loggedIn)
-  }
+  // }
+  // componentDidUpdate() {
+  //   console.log(this.state.loggedIn)
+  // }
 
   render () {
     return (

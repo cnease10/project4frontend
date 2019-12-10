@@ -1,6 +1,6 @@
 //need a form that creates a date for logged in users
 import React, {Component} from 'react';
-import {Form, Button, Header, Segment, Grid} from 'semantic-ui-react';
+import {Form, Button, Header, Segment} from 'semantic-ui-react';
 import './create.css'
 class AddDate extends Component {
     constructor() {

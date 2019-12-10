@@ -1,7 +1,7 @@
 //need a log in page for current users - use react router dom
 
 import React, { Component } from 'react'
-import {Form, Label, Button, Message, Icon, Segment, Container, Grid, Divider} from 'semantic-ui-react'
+import {Form, Label, Button, Message, Icon, Segment, Grid, Divider} from 'semantic-ui-react'
 import {Link} from 'react-router-dom'
 import './login.css'
 class Login extends Component {
@@ -36,9 +36,9 @@ class Login extends Component {
         console.log(parsedResponse)
         //validation
         if (parsedResponse.status.code === 200) {
-            console.log('success');
+            // console.log('success');
             this.props.logIn();
-            console.log(this.props.logIn)
+            // console.log(this.props.logIn)
             this.props.history.push('/');
             //programatically change url using react-router
         } else {
