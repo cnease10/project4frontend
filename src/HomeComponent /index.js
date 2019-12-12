@@ -50,10 +50,10 @@ const HomeComponent = (props) => {
                     />
                 </Carousel.Item>
                 <Carousel.Item>
-                     <img
+                    <img
                     className="carimg1"
-                    src="https://images.unsplash.com/photo-1456553583670-f4242f36d0fc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
-                    alt="couple with heads resting on eachother"
+                    src="https://images.unsplash.com/photo-1575467678950-0c09aad418af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+                    alt="couple laughing in kitchen" 
                     />
                 </Carousel.Item>
                 <Carousel.Item>
@@ -120,10 +120,10 @@ const HomeComponent = (props) => {
                     />
                 </Carousel.Item>
                 <Carousel.Item>
-                    <img
+                     <img
                     className="carimg1"
-                    src="https://images.unsplash.com/photo-1575467678950-0c09aad418af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
-                    alt="couple laughing in kitchen" 
+                    src="https://images.unsplash.com/photo-1456553583670-f4242f36d0fc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+                    alt="couple with heads resting on eachother"
                     />
                 </Carousel.Item>
                 <Carousel.Item>
